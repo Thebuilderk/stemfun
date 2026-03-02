@@ -3,32 +3,32 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowRight, Puzzle, ImageIcon, UtensilsCrossed } from "lucide-react"
+import { ArrowRight, Atom, Leaf, FlaskConical } from "lucide-react"
 
 const products = [
   {
-    id: "poster",
-    title: "Physics 101 Wall Poster",
-    description: "A beautifully designed educational poster covering key physics concepts from Classical to Modern physics.",
-    icon: ImageIcon,
+    id: "physics",
+    title: "Physics 101",
+    description: "From electromagnetic waves to black holes, explore the forces that govern our universe. Available as posters, puzzles, and table mats.",
+    icon: Atom,
     color: "bg-primary/10 text-primary",
-    href: "/products/physics-101#posters",
+    href: "/products/physics-101",
   },
   {
-    id: "puzzle",
-    title: "Physics 101 Puzzle",
-    description: "An engaging puzzle that makes learning physics concepts fun while developing problem-solving skills.",
-    icon: Puzzle,
+    id: "biology",
+    title: "Biology 101",
+    description: "Discover the human body, plants, animals, and microorganisms. Learn how living things work in a fun, visual way.",
+    icon: Leaf,
     color: "bg-secondary/10 text-secondary",
-    href: "/products/physics-101#puzzles",
+    href: "/products/biology-101",
   },
   {
-    id: "tablemat",
-    title: "Physics 101 Table Mat",
-    description: "Learn physics during meals! A durable, educational table mat perfect for daily learning moments.",
-    icon: UtensilsCrossed,
+    id: "chemistry",
+    title: "Chemistry 101",
+    description: "Explore atoms, molecules, the periodic table, and chemical reactions. Understand the building blocks of everything around us.",
+    icon: FlaskConical,
     color: "bg-accent/10 text-accent",
-    href: "/products/physics-101#tablemats",
+    href: "/products/chemistry-101",
   },
 ]
 
@@ -42,10 +42,10 @@ export function FeaturedProducts() {
             className="text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl"
             style={{ fontFamily: 'var(--font-heading)' }}
           >
-            Our Physics 101 Collection
+            Our 101 Collections
           </h2>
           <p className="mt-4 text-pretty text-muted-foreground md:text-lg">
-            Start your child&apos;s physics journey with our carefully crafted educational products.
+            Start your child&apos;s STEM journey with our carefully crafted educational products in Physics, Biology, and Chemistry.
           </p>
         </div>
 
@@ -85,16 +85,6 @@ export function FeaturedProducts() {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        {/* CTA */}
-        <div className="mt-12 text-center">
-          <Button asChild size="lg" variant="outline" className="rounded-full bg-transparent">
-            <Link href="/products/physics-101">
-              View All Products
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
         </div>
       </div>
     </section>

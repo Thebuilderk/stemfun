@@ -10,53 +10,53 @@ import Link from "next/link"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Physics 101 - STEM Fun",
-  description: "Explore our Physics 101 collection featuring educational posters, puzzles, and table mats designed to make physics fun for young learners.",
+  title: "Chemistry 101 - STEM Fun",
+  description: "Explore our Chemistry 101 collection featuring educational posters, puzzles, and table mats designed to make chemistry fun for young learners.",
 }
 
 const productImages = [
-  { src: "/images/physics-101-poster.jpg", alt: "Physics 101 Wall Poster" },
-  { src: "/images/physics-101-puzzle.jpg", alt: "Physics 101 Puzzle" },
-  { src: "/images/physics-101-tablemat.jpg", alt: "Physics 101 Table Mat" },
+  { src: "/images/chemistry-101-poster.jpg", alt: "Chemistry 101 Wall Poster" },
+  { src: "/images/chemistry-101-puzzle.jpg", alt: "Chemistry 101 Puzzle" },
+  { src: "/images/chemistry-101-tablemat.jpg", alt: "Chemistry 101 Table Mat" },
 ]
 
 const products = [
   {
     id: "posters",
-    title: "Physics 101 Wall Poster",
-    description: "A stunning educational poster that brings the wonders of physics to life! From electromagnetic waves to black holes, this poster covers Classical, Modern, and Interdisciplinary physics concepts in a visually engaging, kid-friendly format.",
+    title: "Chemistry 101 Wall Poster",
+    description: "A stunning educational poster that brings the wonders of chemistry to life! From atoms and molecules to the periodic table and rocket propulsion, this poster covers key chemistry concepts in a visually engaging, kid-friendly format.",
     features: [
       "High-quality print on premium paper",
       "Vibrant cartoon-style illustrations",
-      "Covers 20+ physics concepts",
+      "Covers 15+ chemistry concepts",
       "Perfect for bedrooms, playrooms, or classrooms",
       "Size: Available in A2 and A1",
     ],
     icon: ImageIcon,
-    color: "bg-primary/10 text-primary",
-    ebayLink: "https://www.ebay.co.uk/usr/stemfun-physics101-poster",
-    etsyLink: "https://www.etsy.com/uk/listing/stemfun-physics101-poster",
+    color: "bg-accent/10 text-accent",
+    ebayLink: "https://www.ebay.co.uk/usr/stemfun-chemistry101-poster",
+    etsyLink: "https://www.etsy.com/uk/listing/stemfun-chemistry101-poster",
   },
   {
     id: "puzzles",
-    title: "Physics 101 Puzzle",
-    description: "Make learning physics a hands-on adventure! This engaging puzzle features the same beautiful physics illustrations as our poster, helping children learn while developing problem-solving skills and spatial awareness.",
+    title: "Chemistry 101 Puzzle",
+    description: "Make learning chemistry a hands-on adventure! This engaging puzzle features the same beautiful chemistry illustrations as our poster, helping children learn while developing problem-solving skills and spatial awareness.",
     features: [
       "500 pieces for ages 8+",
       "100 pieces for ages 5-7",
       "High-quality, durable pieces",
       "Finished puzzle can be framed",
-      "Includes physics fact card",
+      "Includes chemistry fact card",
     ],
     icon: Puzzle,
-    color: "bg-secondary/10 text-secondary",
-    ebayLink: "https://www.ebay.co.uk/usr/stemfun-physics101-puzzle",
-    etsyLink: "https://www.etsy.com/uk/listing/stemfun-physics101-puzzle",
+    color: "bg-primary/10 text-primary",
+    ebayLink: "https://www.ebay.co.uk/usr/stemfun-chemistry101-puzzle",
+    etsyLink: "https://www.etsy.com/uk/listing/stemfun-chemistry101-puzzle",
   },
   {
     id: "tablemats",
-    title: "Physics 101 Table Mat",
-    description: "Turn mealtime into learning time! Our durable, wipeable table mat features physics concepts that spark curiosity and conversation during breakfast, lunch, or dinner.",
+    title: "Chemistry 101 Table Mat",
+    description: "Turn mealtime into learning time! Our durable, wipeable table mat features chemistry concepts that spark curiosity and conversation during breakfast, lunch, or dinner.",
     features: [
       "Laminated for durability",
       "Easy to clean - just wipe",
@@ -65,13 +65,13 @@ const products = [
       "Perfect conversation starter",
     ],
     icon: UtensilsCrossed,
-    color: "bg-accent/10 text-accent",
-    ebayLink: "https://www.ebay.co.uk/usr/stemfun-physics101-tablemat",
-    etsyLink: "https://www.etsy.com/uk/listing/stemfun-physics101-tablemat",
+    color: "bg-secondary/10 text-secondary",
+    ebayLink: "https://www.ebay.co.uk/usr/stemfun-chemistry101-tablemat",
+    etsyLink: "https://www.etsy.com/uk/listing/stemfun-chemistry101-tablemat",
   },
 ]
 
-export default function Physics101Page() {
+export default function Chemistry101Page() {
   return (
     <>
       <PhysicsBackground />
@@ -81,12 +81,10 @@ export default function Physics101Page() {
         <section className="py-12 md:py-20">
           <div className="container mx-auto px-4 md:px-6">
             <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
-              {/* Slideshow */}
               <div className="animate-fade-up">
                 <ProductSlideshow images={productImages} />
               </div>
 
-              {/* Product Info */}
               <div className="animate-fade-up flex flex-col justify-center" style={{ animationDelay: '0.1s' }}>
                 <Badge variant="secondary" className="mb-4 w-fit">Featured Collection</Badge>
                 
@@ -94,18 +92,19 @@ export default function Physics101Page() {
                   className="text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl"
                   style={{ fontFamily: 'var(--font-heading)' }}
                 >
-                  Physics 101
+                  Chemistry 101
                 </h1>
                 
                 <p className="mt-4 text-pretty text-lg text-muted-foreground">
-                  Our flagship educational collection that makes physics accessible and exciting for young minds. 
-                  Covering everything from electromagnetic waves to black holes, quantum mechanics to the Big Bang.
+                  Our educational collection that makes chemistry accessible and exciting for young minds. 
+                  Covering everything from atoms and molecules to the periodic table, states of matter, and rocket propulsion.
                 </p>
 
                 <div className="mt-6 flex flex-wrap gap-2">
-                  <Badge variant="outline">Classical Physics</Badge>
-                  <Badge variant="outline">Modern Physics</Badge>
-                  <Badge variant="outline">Interdisciplinary</Badge>
+                  <Badge variant="outline">Atoms & Molecules</Badge>
+                  <Badge variant="outline">Chemical Bonds</Badge>
+                  <Badge variant="outline">States of Matter</Badge>
+                  <Badge variant="outline">Lab Equipment</Badge>
                 </div>
 
                 <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -115,7 +114,7 @@ export default function Physics101Page() {
                     </a>
                   </Button>
                   <Button asChild variant="outline" className="rounded-full bg-transparent" size="lg">
-                    <Link href="/products/physics-101/explanations">
+                    <Link href="/products/chemistry-101/explanations">
                       <BookOpen className="mr-2 h-4 w-4" />
                       Read Explanations
                     </Link>
@@ -137,7 +136,7 @@ export default function Physics101Page() {
                 Choose Your Format
               </h2>
               <p className="mt-2 text-muted-foreground">
-                Same amazing physics content, three different ways to learn
+                Same amazing chemistry content, three different ways to learn
               </p>
             </div>
 
@@ -161,7 +160,7 @@ export default function Physics101Page() {
                     <ul className="space-y-2">
                       {product.features.map((feature) => (
                         <li key={feature} className="flex items-start gap-2 text-sm text-muted-foreground">
-                          <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary" />
+                          <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent" />
                           {feature}
                         </li>
                       ))}
@@ -197,78 +196,57 @@ export default function Physics101Page() {
                 className="text-2xl font-bold tracking-tight text-foreground md:text-3xl"
                 style={{ fontFamily: 'var(--font-heading)' }}
               >
-                What&apos;s Inside Physics 101?
+                {"What's Inside Chemistry 101?"}
               </h2>
               <p className="mt-4 text-muted-foreground">
-                Our Physics 101 collection covers a comprehensive range of physics concepts, organized into three categories.
+                Our Chemistry 101 collection covers a comprehensive range of chemistry concepts to spark curiosity.
               </p>
             </div>
 
             <div className="mt-12 grid gap-8 md:grid-cols-3">
-              {/* Classical Physics */}
               <div className="rounded-2xl border border-border/50 bg-card/50 p-6 backdrop-blur-sm">
-                <h3 
-                  className="text-lg font-semibold text-foreground"
-                  style={{ fontFamily: 'var(--font-heading)' }}
-                >
-                  Classical Physics
+                <h3 className="text-lg font-semibold text-foreground" style={{ fontFamily: 'var(--font-heading)' }}>
+                  Matter & Structure
                 </h3>
                 <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-                  <li>Electromagnetic Waves</li>
-                  <li>Longitudinal Waves</li>
-                  <li>Gravity</li>
-                  <li>Calculus</li>
-                  <li>Thermodynamics</li>
-                  <li>Electromagnetic Spectrum</li>
-                  <li>Atoms</li>
+                  <li>Atoms (Oxygen)</li>
+                  <li>Molecules (Water H2O)</li>
+                  <li>Ionic & Covalent Bonds</li>
+                  <li>States of Matter</li>
+                  <li>Periodic Table</li>
+                  <li>Polymerisation</li>
                 </ul>
               </div>
 
-              {/* Modern Physics */}
               <div className="rounded-2xl border border-border/50 bg-card/50 p-6 backdrop-blur-sm">
-                <h3 
-                  className="text-lg font-semibold text-foreground"
-                  style={{ fontFamily: 'var(--font-heading)' }}
-                >
-                  Modern Physics
+                <h3 className="text-lg font-semibold text-foreground" style={{ fontFamily: 'var(--font-heading)' }}>
+                  Chemistry in Action
                 </h3>
                 <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-                  <li>Special Relativity</li>
-                  <li>General Relativity</li>
-                  <li>E=MC²</li>
-                  <li>Condensed Matter Physics</li>
-                  <li>Schrödinger&apos;s Cat</li>
-                  <li>Quantum Mechanics</li>
-                  <li>Quantum Entanglement</li>
-                  <li>Nuclear Fusion</li>
-                  <li>Nebula</li>
+                  <li>Oil and Gas</li>
+                  <li>pH Scale</li>
+                  <li>Enzymes</li>
+                  <li>Photosynthesis</li>
+                  <li>Pharmaceutical Drugs</li>
+                  <li>{"Boyle's Law"}</li>
                 </ul>
               </div>
 
-              {/* Interdisciplinary */}
               <div className="rounded-2xl border border-border/50 bg-card/50 p-6 backdrop-blur-sm">
-                <h3 
-                  className="text-lg font-semibold text-foreground"
-                  style={{ fontFamily: 'var(--font-heading)' }}
-                >
-                  Interdisciplinary
+                <h3 className="text-lg font-semibold text-foreground" style={{ fontFamily: 'var(--font-heading)' }}>
+                  Applications
                 </h3>
                 <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-                  <li>Geophysics</li>
-                  <li>Biophysics</li>
-                  <li>Astrophysics</li>
-                  <li>String Theory</li>
-                  <li>Big Bang</li>
-                  <li>Black Holes</li>
-                  <li>Dark Matter</li>
-                  <li>Dark Energy</li>
+                  <li>Nuclear Bombs</li>
+                  <li>Rocket Propulsion</li>
+                  <li>Chemistry Apparatuses</li>
                 </ul>
               </div>
             </div>
 
             <div className="mt-12 text-center">
               <Button asChild variant="outline" className="rounded-full bg-transparent" size="lg">
-                <Link href="/products/physics-101/explanations">
+                <Link href="/products/chemistry-101/explanations">
                   <BookOpen className="mr-2 h-4 w-4" />
                   Read Full Explanations
                 </Link>
