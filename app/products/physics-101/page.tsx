@@ -5,7 +5,7 @@ import { ProductSlideshow } from "@/components/product-slideshow"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ExternalLink, BookOpen, Puzzle, ImageIcon, UtensilsCrossed, ShoppingCart } from "lucide-react"
+import { ExternalLink, BookOpen, Puzzle, ImageIcon, UtensilsCrossed } from "lucide-react"
 import Link from "next/link"
 import type { Metadata } from "next"
 
@@ -34,8 +34,7 @@ const products = [
     ],
     icon: ImageIcon,
     color: "bg-primary/10 text-primary",
-    ebayLink: "https://www.ebay.co.uk/usr/stemfun-physics101-poster",
-    etsyLink: "https://www.etsy.com/uk/listing/stemfun-physics101-poster",
+    purchaseLink: "https://www.amazon.co.uk/dp/stemfun-physics101-poster",
   },
   {
     id: "puzzles",
@@ -50,8 +49,7 @@ const products = [
     ],
     icon: Puzzle,
     color: "bg-secondary/10 text-secondary",
-    ebayLink: "https://www.ebay.co.uk/usr/stemfun-physics101-puzzle",
-    etsyLink: "https://www.etsy.com/uk/listing/stemfun-physics101-puzzle",
+    purchaseLink: "https://www.amazon.co.uk/dp/stemfun-physics101-puzzle",
   },
   {
     id: "tablemats",
@@ -66,8 +64,7 @@ const products = [
     ],
     icon: UtensilsCrossed,
     color: "bg-accent/10 text-accent",
-    ebayLink: "https://www.ebay.co.uk/usr/stemfun-physics101-tablemat",
-    etsyLink: "https://www.etsy.com/uk/listing/stemfun-physics101-tablemat",
+    purchaseLink: "https://www.amazon.co.uk/dp/stemfun-physics101-tablemat",
   },
 ]
 
@@ -166,22 +163,12 @@ export default function Physics101Page() {
                         </li>
                       ))}
                     </ul>
-                    <div className="mt-6 flex flex-col gap-2">
-                      <Button asChild className="w-full rounded-full">
-                        <a href={product.ebayLink} target="_blank" rel="noopener noreferrer">
-                          <ShoppingCart className="mr-2 h-4 w-4" />
-                          Buy on eBay
-                          <ExternalLink className="ml-2 h-3 w-3" />
-                        </a>
-                      </Button>
-                      <Button asChild variant="outline" className="w-full rounded-full bg-transparent">
-                        <a href={product.etsyLink} target="_blank" rel="noopener noreferrer">
-                          <ShoppingCart className="mr-2 h-4 w-4" />
-                          Buy on Etsy
-                          <ExternalLink className="ml-2 h-3 w-3" />
-                        </a>
-                      </Button>
-                    </div>
+                    <Button asChild className="mt-6 w-full rounded-full">
+                      <a href={product.purchaseLink} target="_blank" rel="noopener noreferrer">
+                        Purchase
+                        <ExternalLink className="ml-2 h-4 w-4" />
+                      </a>
+                    </Button>
                   </CardContent>
                 </Card>
               ))}

@@ -52,28 +52,23 @@ export function Navigation() {
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/products/physics-101/explanations" className="w-full cursor-pointer pl-6">
-                  Physics 101 Explanations
+                <Link href="/products/physics-101#posters" className="w-full cursor-pointer pl-6">
+                  Posters
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/products/biology-101" className="w-full cursor-pointer">
-                  Biology 101
+                <Link href="/products/physics-101#puzzles" className="w-full cursor-pointer pl-6">
+                  Puzzles
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/products/biology-101/explanations" className="w-full cursor-pointer pl-6">
-                  Biology 101 Explanations
+                <Link href="/products/physics-101#tablemats" className="w-full cursor-pointer pl-6">
+                  Table Mats
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
-                <Link href="/products/chemistry-101" className="w-full cursor-pointer">
-                  Chemistry 101
-                </Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem asChild>
-                <Link href="/products/chemistry-101/explanations" className="w-full cursor-pointer pl-6">
-                  Chemistry 101 Explanations
+                <Link href="/products/physics-101/explanations" className="w-full cursor-pointer">
+                  Physics 101 Explanation
                 </Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
@@ -84,13 +79,6 @@ export function Navigation() {
             className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
           >
             Why STEM?
-          </Link>
-
-          <Link 
-            href="/contact" 
-            className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
-          >
-            Contact
           </Link>
 
           <Button asChild className="rounded-full">
@@ -133,39 +121,32 @@ export function Navigation() {
                 Physics 101
               </Link>
               <Link 
+                href="/products/physics-101#posters" 
+                className="pl-8 text-sm text-muted-foreground"
+                onClick={() => setIsOpen(false)}
+              >
+                Posters
+              </Link>
+              <Link 
+                href="/products/physics-101#puzzles" 
+                className="pl-8 text-sm text-muted-foreground"
+                onClick={() => setIsOpen(false)}
+              >
+                Puzzles
+              </Link>
+              <Link 
+                href="/products/physics-101#tablemats" 
+                className="pl-8 text-sm text-muted-foreground"
+                onClick={() => setIsOpen(false)}
+              >
+                Table Mats
+              </Link>
+              <Link 
                 href="/products/physics-101/explanations" 
-                className="pl-8 text-sm text-muted-foreground"
-                onClick={() => setIsOpen(false)}
-              >
-                Physics 101 Explanations
-              </Link>
-              <Link 
-                href="/products/biology-101" 
                 className="pl-4 text-sm text-muted-foreground"
                 onClick={() => setIsOpen(false)}
               >
-                Biology 101
-              </Link>
-              <Link 
-                href="/products/biology-101/explanations" 
-                className="pl-8 text-sm text-muted-foreground"
-                onClick={() => setIsOpen(false)}
-              >
-                Biology 101 Explanations
-              </Link>
-              <Link 
-                href="/products/chemistry-101" 
-                className="pl-4 text-sm text-muted-foreground"
-                onClick={() => setIsOpen(false)}
-              >
-                Chemistry 101
-              </Link>
-              <Link 
-                href="/products/chemistry-101/explanations" 
-                className="pl-8 text-sm text-muted-foreground"
-                onClick={() => setIsOpen(false)}
-              >
-                Chemistry 101 Explanations
+                Physics 101 Explanation
               </Link>
             </div>
             <Link 
@@ -174,13 +155,6 @@ export function Navigation() {
               onClick={() => setIsOpen(false)}
             >
               Why STEM?
-            </Link>
-            <Link 
-              href="/contact" 
-              className="text-sm font-medium text-foreground"
-              onClick={() => setIsOpen(false)}
-            >
-              Contact
             </Link>
             <Button asChild className="mt-2 w-full rounded-full">
               <Link href="/products/physics-101" onClick={() => setIsOpen(false)}>
