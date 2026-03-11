@@ -7,3 +7,5 @@ const nextConfig = {
 
 export default nextConfig;  // Use export default for ESM / .mjs
 // OR module.exports = nextConfig; for CommonJS / .js
+
+
